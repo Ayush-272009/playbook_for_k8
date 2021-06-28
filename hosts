@@ -1,0 +1,13 @@
+[kubernetes_master]
+192.168.163.129 ansible_ssh_user=root ansible_ssh_pass=jaya
+[kubernetes_slave]
+192.168.163.128 ansible_ssh_user=root ansible_ssh_pass=jaya
+
+[kubernetes_cluster:children]
+kubernetes_master
+kubernetes_slave
+
+[private_kubernetes_master]
+192.168.163.129 ansible_ssh_user=root ansible_ssh_pass=jaya
+[private_kubernetes_slave]
+192.168.163.128 ansible_ssh_user=root ansible_ssh_pass=jaya
